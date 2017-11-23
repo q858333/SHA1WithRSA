@@ -17,8 +17,7 @@
 
 
 #pragma mark - SHA1+RSA 签名
-+ (NSString *)signTheDataSHA1WithRSA:(NSString *)plainText
-{
++ (NSString *)signSHA1WithRSA:(NSString *)plainText{
     uint8_t* signedBytes = NULL;
     size_t signedBytesSize = 0;
     OSStatus sanityCheck = noErr;
@@ -91,8 +90,7 @@
     return hash;
 }
 #pragma mark - SHA1+RSA 验签
-+ (BOOL)verifyBytesSHA1WithRSA:(NSString *)plainString signature:(NSString *)signatureString{
-
++ (BOOL)verifySHA1WithRSA:(NSString *)plainString signature:(NSString *)signatureString{
 
     NSData *plainData = [plainString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *signatureData = [self base64DecodeString:signatureString];

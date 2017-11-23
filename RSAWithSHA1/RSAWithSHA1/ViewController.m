@@ -18,11 +18,11 @@
     [super viewDidLoad];
 
     NSString *string = @"123";
-    NSString *sign = [RSA signTheDataSHA1WithRSA:string];
+    NSString *sign = [RSA signSHA1WithRSA:string];
     NSLog(@"签名----%@",sign);
 
     //返回1表示验签成功
-    NSLog(@"验签-----%d",[RSA verifyBytesSHA1WithRSA:string signature:sign]);
+    NSLog(@"验签-----%d",[RSA verifySHA1WithRSA:string signature:sign]);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

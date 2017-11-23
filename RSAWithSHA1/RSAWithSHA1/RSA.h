@@ -14,13 +14,13 @@
  *
  *  @return string
  */
-+ (NSString *)signTheDataSHA1WithRSA:(NSString *)plainText;
++ (NSString *)signSHA1WithRSA:(NSString *)plainText;
 
 /**
  *  SHA1+RSA 验签
  *
  *  @return bool
  */
-+ (BOOL)verifyBytesSHA1WithRSA:(NSString *)plainString signature:(NSString *)signatureString;
++ (BOOL)verifySHA1WithRSA:(NSString *)plainString signature:(NSString *)signatureString;
 
 @end
